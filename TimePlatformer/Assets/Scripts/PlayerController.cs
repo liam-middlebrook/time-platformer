@@ -3,27 +3,50 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+    /// <summary>
+    /// The Speed of the Player's Horizontal Movement
+    /// </summary>
     public float playerSpeed = 24.0f;
+
+    /// <summary>
+    /// The time in seconds for the player between jumps
+    /// </summary>
     public float jumpCooldown = 1.8f;
 
-    private bool canJump = true;
-    private Vector2 vel = Vector2.zero;
+    /// <summary>
+    /// The jumping force of the player
+    /// </summary>
 
-    // Update is called once per frame
-    void FixedUpdate ()
+    public float jumpHeight = 25.0f;
+    /// <summary>
+    /// Whether or not the player has the ability to jump
+    /// </summary>
+    private bool canJump = true;
+
+    /// <summary>
+    /// The temporary velocity of the player before application to the rigidbody
+    /// </summary>
+    private Vector2 vel = Vector2.zero;
+    
+    // Update since time and physics sensitive
+    void Update ()
     {
         vel = Vector2.zero;
-        if (Input.GetKey("a"))
+
+        // Move Left
+        if (Input.GetKey(KeyCode.A))
         {
             vel += new Vector2(-1.0f, 0.0f);
         }
 
-        if (Input.GetKey("d"))
+        // Move Right
+        if (Input.GetKey(KeyCode.D))
         {
             vel += new Vector2(1.0f, 0.0f);
         }
 
-        if (Input.GetKey("w"))
+        // Jump
+        if (Input.GetKey(KeyCode.W))
         {
             if(canJump)
             {
@@ -32,12 +55,18 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TimeController.Instance.ToggleTime();
+        }
+
+        // Apply force to rigidbody
         this.GetComponent<Rigidbody2D>().AddForce(playerSpeed * vel);
     }
-
+    
     IEnumerator Jump()
     {
-        vel += new Vector2(0.0f, 25.0f);
+        vel += new Vector2(0.0f, jumpHeight);
         yield return new WaitForSeconds(jumpCooldown);
         canJump = true;
     }
