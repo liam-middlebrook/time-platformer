@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// The Speed of the Player's Horizontal Movement
     /// </summary>
-    public float playerSpeed = 24.0f;
+    public float playerSpeed = 15.0f;
 
     /// <summary>
     /// The time in seconds for the player between jumps
@@ -23,6 +23,11 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private bool canJump = true;
 
+	/// <summary>
+	/// The booloean used to guage the players direction.
+	/// </summary>
+	private bool faceRight = true;
+
     /// <summary>
     /// The temporary velocity of the player before application to the rigidbody
     /// </summary>
@@ -37,12 +42,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             vel += new Vector2(-1.0f, 0.0f);
+			if(faceRight) Flip ();
         }
 
         // Move Right
         if (Input.GetKey(KeyCode.D))
         {
             vel += new Vector2(1.0f, 0.0f);
+			if(!faceRight) Flip ();
         }
 
         // Jump
@@ -63,6 +70,15 @@ public class PlayerController : MonoBehaviour
         // Apply force to rigidbody
         this.GetComponent<Rigidbody2D>().AddForce(playerSpeed * vel);
     }
+
+	//Flips the booleon for the player direction for next time, then mirrors the player along the Y axis.
+	private void Flip()
+	{
+		faceRight= !faceRight;
+		Vector3 revScale = transform.localScale;
+		revScale.x *= -1;
+		transform.localScale = revScale;
+	}
     
     IEnumerator Jump()
     {
