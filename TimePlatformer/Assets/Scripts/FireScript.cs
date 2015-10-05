@@ -8,11 +8,6 @@ public class FireScript : MonoBehaviour {
 	/// </summary>
 	public Vector3 respawnLoc;
 
-	// Use this for initialization
-	void Start () {
-		respawnLoc = new Vector3 (0f, 1.5f, 0f);
-	}
-
 	/// <summary>
 	/// Checks for collision (with the player) and then resets the player back to a respanwn location.
 	/// </summary>

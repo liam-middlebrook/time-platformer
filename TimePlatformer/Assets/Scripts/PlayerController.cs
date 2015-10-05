@@ -6,18 +6,18 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// The Speed of the Player's Horizontal Movement
     /// </summary>
-    public float playerSpeed = 15.0f;
+    public float playerSpeed;
 
     /// <summary>
     /// The time in seconds for the player between jumps
     /// </summary>
-    public float jumpCooldown = 1.8f;
+    public float jumpCooldown;
 
     /// <summary>
     /// The jumping force of the player
     /// </summary>
 
-    public float jumpHeight = 25.0f;
+    public float jumpHeight;
     /// <summary>
     /// Whether or not the player has the ability to jump
     /// </summary>

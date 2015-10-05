@@ -27,6 +27,7 @@ public class WindScript : MonoBehaviour {
 	// Handle switching for the time of day
 	void TimeChanged(TimeOfDay newTime)
 	{
+		Flip ();
 		if (newTime == ForceRightWhen) {
 			forceVec= new Vector2(1*force,0);
 		} else {
@@ -35,7 +36,14 @@ public class WindScript : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D (Collider2D col){
-
 		col.gameObject.GetComponent<Rigidbody2D>().AddForce(forceVec);
+	}
+
+	//Mirrors the wind along the Y axis.
+	private void Flip()
+	{
+		Vector3 revScale = transform.localScale;
+		revScale.x *= -1;
+		transform.localScale = revScale;
 	}
 }
