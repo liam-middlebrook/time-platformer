@@ -42,26 +42,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             vel += new Vector2(-1.0f, 0.0f);
-			if(faceRight){
-				faceRight= !faceRight;
-
-				Vector3 revScale = transform.localScale;
-				revScale.x *= -1;
-				transform.localScale = revScale;
-			}
+			if(faceRight) Flip ();
         }
 
         // Move Right
         if (Input.GetKey(KeyCode.D))
         {
             vel += new Vector2(1.0f, 0.0f);
-			if(!faceRight){
-				faceRight= !faceRight;
-				
-				Vector3 revScale = transform.localScale;
-				revScale.x *= -1;
-				transform.localScale = revScale;
-			}
+			if(!faceRight) Flip ();
         }
 
         // Jump
@@ -77,11 +65,20 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TimeController.Instance.ToggleTime();
-        } 
+        }
 
         // Apply force to rigidbody
         this.GetComponent<Rigidbody2D>().AddForce(playerSpeed * vel);
     }
+
+	//Flips the booleon for the player direction for next time, then mirrors the player along the Y axis.
+	private void Flip()
+	{
+		faceRight= !faceRight;
+		Vector3 revScale = transform.localScale;
+		revScale.x *= -1;
+		transform.localScale = revScale;
+	}
     
     IEnumerator Jump()
     {

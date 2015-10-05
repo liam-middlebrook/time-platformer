@@ -58,7 +58,6 @@ public class TimeController
     /// <param name="newTime"></param>
     public void ChangeTime(TimeOfDay newTime)
     {
-        //Debug.Log("Time Changed!!!!" + newTime);
         _time = newTime;
 
         // If anyone is listening to the time change event,
