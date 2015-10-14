@@ -32,16 +32,24 @@ public class PlayerController : MonoBehaviour
     /// The temporary velocity of the player before application to the rigidbody
     /// </summary>
     private Vector2 vel = Vector2.zero;
+
+	/// <summary>
+	/// This is the local booleon used to track if the player is moving based on whether or not they have hit movement keys
+	/// </summary>
+	private bool moving= false;
     
     // Update since time and physics sensitive
     void Update ()
     {
         vel = Vector2.zero;
+		moving = false;
 
         // Move Left
         if (Input.GetKey(KeyCode.A))
         {
             vel += new Vector2(-1.0f, 0.0f);
+			// trigger the booleon for the movement animation
+			moving=true;
 			if(faceRight) Flip ();
         }
 
@@ -49,6 +57,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             vel += new Vector2(1.0f, 0.0f);
+			moving=true;
 			if(!faceRight) Flip ();
         }
 
@@ -66,6 +75,9 @@ public class PlayerController : MonoBehaviour
         {
             TimeController.Instance.ToggleTime();
         }
+
+		// trigger the booleon for the movement animation using our local boolean
+		this.GetComponent<Animator>().SetBool("moving", moving);
 
         // Apply force to rigidbody
         this.GetComponent<Rigidbody2D>().AddForce(playerSpeed * vel);
