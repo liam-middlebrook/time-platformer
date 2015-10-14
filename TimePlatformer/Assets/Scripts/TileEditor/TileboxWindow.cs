@@ -17,6 +17,11 @@ public class TileboxWindow : EditorWindow
         SceneView.onSceneGUIDelegate = window.GridUpdate;
     }
 
+    public void OnDestroy()
+    {
+        SceneView.onSceneGUIDelegate = null;
+    }
+
     private void GridUpdate(SceneView sceneview)
     {
         Event e = Event.current;
