@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 29b50f52faff40d40bd7388aaa7e2333
+timeCreated: 1444853570
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: KnutNight1
+    21300002: KnutNight2
+    21300004: KnutNight3
+    21300006: KnutNight4
+    21300008: KnutNight5
+    21300010: KnutDay1
+    21300012: KnutDay2
+    21300014: KnutDay3
+    21300016: KnutDay4
+    21300018: KnutDay5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: KnutNight1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 88
+        height: 108
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutNight2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 72
+        height: 108
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutNight3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 68
+        height: 116
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutNight4
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 68
+        height: 116
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutNight5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 0
+        width: 68
+        height: 116
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutDay1
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 0
+        width: 88
+        height: 128
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutDay2
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 80
+        height: 128
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutDay3
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 0
+        width: 80
+        height: 128
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutDay4
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 0
+        width: 80
+        height: 128
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutDay5
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 80
+        height: 128
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
