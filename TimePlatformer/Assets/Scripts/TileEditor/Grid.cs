@@ -1,10 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Grid : MonoBehaviour
 {
     public float width = 1.28f;
     public float height = 1.28f;
+
+    [System.Serializable]
+    public struct TileType
+    {
+        public string name;
+        public GameObject prefab;
+    }
+    public List<TileType> tileTypes;
 
     void OnDrawGizmos()
     {
