@@ -46,4 +46,9 @@ public class WindScript : MonoBehaviour {
 		revScale.x *= -1;
 		transform.localScale = revScale;
 	}
+
+	void OnDestroy()
+	{
+		TimeController.Instance.TimeChanged -= TimeChanged;
+	}
 }

@@ -31,4 +31,9 @@ public class ToggleObstacle : MonoBehaviour
         this._renderer.enabled = (newTime == ActiveWhen);
         this._collider.enabled = (newTime == ActiveWhen);
     }
+
+    void OnDestroy()
+    {
+        TimeController.Instance.TimeChanged -= TimeChanged;
+    }
 }

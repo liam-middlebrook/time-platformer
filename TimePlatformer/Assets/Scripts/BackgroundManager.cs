@@ -24,4 +24,10 @@ public class BackgroundManager : MonoBehaviour
         DayBackground.enabled = (newTime == TimeOfDay.DAY);
         NightBackground.enabled = (newTime == TimeOfDay.NIGHT);
     }
+
+    void OnDestroy()
+    {
+    	TimeController.Instance.TimeChanged -= TimeChanged;
+    }
+    
 }
