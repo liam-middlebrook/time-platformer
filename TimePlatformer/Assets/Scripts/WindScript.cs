@@ -6,7 +6,7 @@ public class WindScript : MonoBehaviour {
 	/// <summary>
 	/// The force applied by the wind
 	/// </summary>
-	public float force;
+	public Vector2 force;
 
 	// What TimeOfDay is this object active during?
 	public TimeOfDay ForceRightWhen;
@@ -29,9 +29,9 @@ public class WindScript : MonoBehaviour {
 	{
 		Flip ();
 		if (newTime == ForceRightWhen) {
-			forceVec= new Vector2(1*force,0);
+			forceVec= force;
 		} else {
-			forceVec= new Vector2(-1*force,0);
+			forceVec= -force;
 		}
 	}
 
