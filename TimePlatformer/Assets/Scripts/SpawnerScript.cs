@@ -7,7 +7,6 @@ public class SpawnerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Instantiate (Player);
-		Player.transform.position = this.transform.position;
+		Instantiate (Player, this.transform.position, Quaternion.identity);
 	}
 }
