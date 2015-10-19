@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: c027a1101fbf8e6408c3555c9d6ab8ff
+timeCreated: 1445285942
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: KnutAnimation_0
+    21300002: KnutAnimation_1
+    21300004: KnutAnimation_2
+    21300006: KnutAnimation_3
+    21300008: KnutAnimation_4
+    21300010: KnutAnimation_5
+    21300012: KnutAnimation_6
+    21300014: KnutAnimation_7
+    21300016: KnutAnimation_8
+    21300018: KnutAnimation_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: KnutAnimation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 88
+        height: 108
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutAnimation_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 72
+        height: 108
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutAnimation_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 68
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutAnimation_3
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 68
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutAnimation_4
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 0
+        width: 68
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutAnimation_5
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 0
+        width: 88
+        height: 128
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutAnimation_6
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 80
+        height: 128
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutAnimation_7
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 0
+        width: 80
+        height: 128
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutAnimation_8
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 0
+        width: 80
+        height: 128
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: KnutAnimation_9
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 80
+        height: 128
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
