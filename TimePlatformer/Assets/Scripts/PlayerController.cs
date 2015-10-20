@@ -40,7 +40,9 @@ public class PlayerController : MonoBehaviour
 		moving = false;
 
         // Move Left
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A)
+            || Input.GetAxis("Horizontal") < -0.2f
+            )
         {
             vel += new Vector2(-1.0f, 0.0f);
 			// trigger the booleon for the movement animation
@@ -49,7 +51,9 @@ public class PlayerController : MonoBehaviour
         }
 
         // Move Right
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D)
+            || Input.GetAxis("Horizontal") > 0.2f
+            )
         {
             vel += new Vector2(1.0f, 0.0f);
 			moving=true;
@@ -57,7 +61,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // Jump
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W)
+            || Input.GetButton("joystick 1 button 0") //shield
+            || Input.GetButton("joystick 1 button 7") //pc
+            )
         {
             if(canJump)
             {
@@ -66,7 +73,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)
+            || Input.GetButtonDown("joystick 1 button 2") //shield
+            || Input.GetButtonDown("joystick 1 button 9") //pc
+            )
         {
             TimeController.Instance.ToggleTime();
         }
