@@ -9,11 +9,6 @@ public class PlayerController : MonoBehaviour
     public float playerSpeed;
 
     /// <summary>
-    /// The time in seconds for the player between jumps
-    /// </summary>
-    public float jumpCooldown;
-
-    /// <summary>
     /// The jumping force of the player
     /// </summary>
 
@@ -67,7 +62,7 @@ public class PlayerController : MonoBehaviour
             if(canJump)
             {
                 canJump = false;
-                StartCoroutine("Jump");
+                vel += new Vector2(0.0f, jumpHeight);
             }
         }
 
@@ -91,11 +86,12 @@ public class PlayerController : MonoBehaviour
 		revScale.x *= -1;
 		transform.localScale = revScale;
 	}
-    
-    IEnumerator Jump()
+
+    void OnCollisionEnter2D(Collision2D col)
     {
-        vel += new Vector2(0.0f, jumpHeight);
-        yield return new WaitForSeconds(jumpCooldown);
-        canJump = true;
+        if (col.gameObject.tag == "Floor")
+        {
+            canJump = true;
+        }
     }
 }
