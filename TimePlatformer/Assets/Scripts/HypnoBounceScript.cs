@@ -19,6 +19,8 @@ public class HypnoBounceScript : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D col)
     {
-        col.gameObject.GetComponent<Rigidbody2D>().AddForce(bounceAmount * Vector2.up);
+		if (col.gameObject.tag == "Player") {
+			col.gameObject.GetComponent<Rigidbody2D> ().AddForce (bounceAmount * Vector2.up);
+		}
     }
 }

@@ -50,6 +50,14 @@ public class EnemyHorizontalMovementScript : MonoBehaviour {
 	{
         startPosition = transform.position;
 		outOfRange = false;
+
+		// Listen to the time changed event
+		TimeController.Instance.TimeChanged += TimeChanged;
+		
+		// Set the intial state of the object based on what time the
+		// level is starting off as
+		
+		TimeChanged(TimeController.Instance.CurrentTime);
 	}
 	
 	// Update is called once per frame
@@ -59,14 +67,6 @@ public class EnemyHorizontalMovementScript : MonoBehaviour {
 		{
 			Walk ();
 		}
-		
-		// Listen to the time changed event
-		TimeController.Instance.TimeChanged += TimeChanged;
-		
-		// Set the intial state of the object based on what time the
-		// level is starting off as
-		
-		TimeChanged(TimeController.Instance.CurrentTime);
 	}
 	
 	/// <summary>
