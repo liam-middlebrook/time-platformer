@@ -32,6 +32,23 @@ public class PlayerController : MonoBehaviour
 	/// This is the local booleon used to track if the player is moving based on whether or not they have hit movement keys
 	/// </summary>
 	private bool moving= false;
+
+	/// <summary>
+	/// The float that will givew the distance we check using a raycast for grounded detection
+	/// </summary>
+	private float groundDist;
+
+	/// <summary>
+	/// This booleon basically checks to see if the player has already initiated a jump one frame ago. If they have, we don't allow the system to check if we can add more jump force
+	/// </summary>
+	private bool aired;
+
+	// A start function so we can set ground distance and give aired an initial value.
+	void Start()
+	{
+		groundDist = GetComponent<BoxCollider2D> ().bounds.extents.y;
+		aired = false;
+	}
     
     // Update since time and physics sensitive
     void Update ()
@@ -59,12 +76,17 @@ public class PlayerController : MonoBehaviour
         // Jump
         if (Input.GetKey(KeyCode.W))
         {
-            if(canJump)
-            {
-                canJump = false;
-                vel += new Vector2(0.0f, jumpHeight);
-            }
-        }
+	            if(IsGrounded())
+	            {
+					//making sure they haven't already started a jump last frame and happen to still be close to the block
+					if(!aired){
+						aired=true;
+		                vel += new Vector2(0.0f, jumpHeight);
+					}
+				}else{
+				aired=false;
+			}
+			}
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -76,7 +98,18 @@ public class PlayerController : MonoBehaviour
 
         // Apply force to rigidbody
         this.GetComponent<Rigidbody2D>().AddForce(playerSpeed * vel);
+
     }
+
+	private bool IsGrounded(){
+		RaycastHit2D[] hit = Physics2D.RaycastAll (transform.position, Vector2.down, groundDist+.02f);
+		for (int i=0; i<hit.Length; i++) {
+			if (hit [i].transform.gameObject.tag != "Player") {
+				return true;
+			} 
+		} 
+		return false;
+	}
 
 	//Flips the booleon for the player direction for next time, then mirrors the player along the Y axis.
 	private void Flip()
@@ -86,12 +119,4 @@ public class PlayerController : MonoBehaviour
 		revScale.x *= -1;
 		transform.localScale = revScale;
 	}
-
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Floor")
-        {
-            canJump = true;
-        }
-    }
 }
