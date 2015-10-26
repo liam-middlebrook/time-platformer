@@ -48,12 +48,14 @@ public class PauseMenuScript : MonoBehaviour {
 	public void restart(){
         var lastLvl = Application.loadedLevel;
         Application.LoadLevel(lastLvl);
+        Time.timeScale = 1;
     }
 
 
 	// If main menu button is clicked it will load the main menu
 	public void mainMenu(){
         Application.LoadLevel(0);
+        Time.timeScale = 1;
 
     }
 
