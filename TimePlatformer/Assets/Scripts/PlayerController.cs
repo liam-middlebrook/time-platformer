@@ -84,6 +84,9 @@ public class PlayerController : MonoBehaviour
 		// trigger the booleon for the movement animation using our local boolean
 		this.GetComponent<Animator>().SetBool("moving", moving);
 
+        // trigger the booleon for the movement animation using our local boolean
+        this.GetComponent<Animator>().SetBool("jumping", !canJump);
+
         // Apply force to rigidbody
         this.GetComponent<Rigidbody2D>().AddForce(playerSpeed * vel);
     }

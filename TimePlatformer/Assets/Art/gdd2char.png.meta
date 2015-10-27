@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0d41bac747e4e254e8c6bf38741e5c1c
-timeCreated: 1444609624
+timeCreated: 1445907337
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,7 @@ TextureImporter:
     21300016: gdd2char_8
     21300018: gdd2char_9
     21300020: gdd2char_10
+    21300022: gdd2char_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -164,6 +165,16 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gdd2char_11
+      rect:
+        serializedVersion: 2
+        x: 32
         y: 0
         width: 32
         height: 32
